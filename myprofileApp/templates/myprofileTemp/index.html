@@ -1,0 +1,415 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/myLogo.png' %}" type="image/x-icon">
+    <!-- css link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- cdnjs script cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <!-- cdnjs css cdns -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <title>Oliver-Mulaku's Portfolio</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href=""><img src="{% static 'images/myLogoNamed.png' %}" alt="" width="250" height="60"></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-bars">Home</a></li>
+                <li><a href="#about" class="menu-bars">About</a></li>
+                <li><a href="#service" class="menu-bars">Services</a></li>
+                <li><a href="#skills" class="menu-bars">Skills</a></li>
+                <li><a href="#projects" class="menu-bars">Projects</a></li>
+                <li><a href="#contacts" class="menu-bars">Contact</a></li>
+            </ul>
+            <div class="menu-bars">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    
+    {% for msg in messages %}
+        <p style="font-family:'Trebuchet Ms'; font-size: 15px; padding: 10px; z-index: 9999; background-color: #112f57; color: cyan;">{{ msg }}</p>
+    {% endfor %}
+    <!-- scroll-up button -->
+    <div class="scroll-up-btn">
+        <i class="btn">&gt;</i>
+    </div>
+    <!-- home section -->
+    <section class="home" id='home'>
+        <div class="max-width">
+            <div class="home-content" id="home-content">
+                <p class="text-mid">Hello there, I am </p>
+                <p class="text-large">
+                    <svg id='myName' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="400px" height="" viewBox="0 0 1900 900" style="enable-background:new 0 0 1900 900;" xml:space="preserve">
+                        <g>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M21.607,456.209
+                                c0-99.006,7.857-182.752,23.574-251.242c15.715-68.483,36.722-102.729,63.023-102.729c28.956,0,51.086,31.005,66.391,93
+                                c15.302,62.005,22.955,148.991,22.955,260.971c0,111.982-7.996,200.875-23.986,266.669c-15.992,65.798-38.694,98.693-68.109,98.693
+                                c-27.034,0-47.765-32.576-62.198-97.743C28.823,658.665,21.607,569.459,21.607,456.209z M58.719,456.209
+                                c0,81.303,3.986,144.248,11.959,188.848c7.973,44.603,19.564,66.905,34.776,66.905c17.869,0,31.499-21.827,40.893-65.48
+                                c9.392-43.653,14.09-107.073,14.09-190.273c0-162.905-17.412-244.362-52.234-244.362c-15.944,0-28.178,22.064-36.7,66.192
+                                C62.981,322.165,58.719,381.558,58.719,456.209z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M233.012,112.202l34.364-28.469v571.291
+                                c0,62.631,5.406,99.96,16.219,111.982c-5.315,34.798-14.387,52.19-27.216,52.19c-15.58,0-23.367-37.319-23.367-111.978V112.202z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M319.333,809.71V398.796h-18.831v-97.271h53.608
+                                V809.71H319.333z M337.064,104.61c5.498,0,10.193,6.726,14.09,20.167c3.893,13.449,5.842,29.656,5.842,48.634
+                                c0,18.98-1.948,35.195-5.842,48.637c-3.897,13.449-8.592,20.165-14.09,20.165c-5.498,0-10.195-6.716-14.089-20.165
+                                c-3.896-13.442-5.842-29.656-5.842-48.637c0-18.978,1.946-35.185,5.842-48.634C326.87,111.336,331.566,104.61,337.064,104.61z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M455.139,819.196h-12.371L376.24,301.525h37.663
+                                l35.188,310.32l37.8-310.32h36.425L455.139,819.196z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M673.966,591.915H568.814
+                                c0.64,40.499,4.673,71.968,12.095,94.427c7.423,22.463,17.41,33.687,29.965,33.687c15.67,0,27.581-14.073,35.738-42.229
+                                l13.333,90.626c-12.096,33.854-30.15,50.771-54.157,50.771c-22.453,0-40.205-22.693-53.264-68.089
+                                c-13.058-45.386-19.587-108.732-19.587-190.033c0-80.028,7.169-144.877,21.512-194.544c14.34-49.657,31.546-74.494,51.614-74.494
+                                c21.35,0,38.487,21.988,51.408,65.955c12.921,43.972,19.381,99.96,19.381,167.969C676.853,540.515,675.891,562.496,673.966,591.915
+                                z M570.051,502.711h72.301c-2.383-74.333-14.295-111.508-35.738-111.508C587.003,391.204,574.815,428.379,570.051,502.711z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M789.428,412.083
+                                c-6.14-13.916-12.875-20.88-20.206-20.88c-7.972,0-15.051,12.502-21.236,37.486c-6.186,24.991-9.278,55.516-9.278,91.578V809.71
+                                h-34.363V301.525h34.363v46.5c9.622-37.322,22.405-55.989,38.35-55.989c11.728,0,20.708,6.168,26.94,18.505L789.428,412.083z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1099.25,810.185h-34.639l-20.892-374.853
+                                l-40.549,383.864h-12.784l-40.549-383.864l-21.718,374.853h-34.501l40.549-695.609h18.969l43.573,468.325l42.61-468.325h18.832
+                                L1099.25,810.185z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1214.026,810.185v-42.704
+                                c-4.859,14.235-11.546,26.413-20.069,36.536c-8.523,10.118-16.357,15.179-23.505,15.179c-34.181,0-51.27-62.631-51.27-187.899
+                                V301.525h34.364v320.758c0,65.169,8.474,97.745,25.43,97.745c7.787,0,15.027-6.956,21.717-20.877
+                                c6.687-13.916,11.134-30.05,13.334-48.397v-349.23h34.363v508.659H1214.026z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1291.413,112.202l34.364-28.469v571.291
+                                c0,62.631,5.406,99.96,16.219,111.982c-5.315,34.798-14.388,52.19-27.216,52.19c-15.58,0-23.367-37.319-23.367-111.978V112.202z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1450.447,758.939
+                                c-3.117,17.72-8.546,32.189-16.289,43.414c-7.745,11.224-15.831,16.844-24.26,16.844c-15.855,0-28.315-13.677-37.388-41.039
+                                c-9.071-27.358-13.609-66.195-13.609-116.491c0-58.838,6.393-104.863,19.176-138.078c12.782-33.215,30.949-49.821,54.5-49.821
+                                c4.031,0,8.796,2.372,14.294,7.117c0-59.787-10.951-89.681-32.851-89.681c-12.921,0-23.734,7.438-32.439,22.302l-7.423-92.05
+                                c11.821-19.612,25.886-29.419,42.199-29.419c22.45,0,38.899,17.637,49.345,52.905c10.446,35.276,15.669,102.097,15.669,200.474
+                                v108.659c0,67.698,3.94,110.245,11.821,127.641c-2.84,17.079-6.003,27.598-9.484,31.553c-3.484,3.95-7.47,5.928-11.959,5.928
+                                c-4.948,0-9.395-6.329-13.334-18.978C1454.478,787.57,1451.822,773.81,1450.447,758.939z M1447.147,570.563
+                                c-5.865-4.107-10.263-6.168-13.194-6.168c-27.127,0-40.687,30.687-40.687,92.053c0,45.553,7.649,68.324,22.955,68.324
+                                c20.618,0,30.926-35.586,30.926-106.76V570.563z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1612.645,809.71l-43.299-230.133l-16.494,60.262
+                                V809.71h-34.364V112.202l34.364-28.469v412.808l49.07-195.016h41.374l-49.758,192.644l59.931,315.54H1612.645z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1767.556,810.185v-42.704
+                                c-4.859,14.235-11.546,26.413-20.069,36.536c-8.523,10.118-16.357,15.179-23.505,15.179c-34.181,0-51.27-62.631-51.27-187.899
+                                V301.525h34.364v320.758c0,65.169,8.474,97.745,25.43,97.745c7.787,0,15.027-6.956,21.717-20.877
+                                c6.687-13.916,11.134-30.05,13.333-48.397v-349.23h34.364v508.659H1767.556z"/>
+                            <path style="fill:none;stroke:#FFFFFF;stroke-width:13;stroke-miterlimit:10;" d="M1844.393,747.548
+                                c0-23.721,2.405-43.888,7.216-60.497c4.811-16.609,10.653-24.911,17.526-24.911c6.871,0,12.714,8.302,17.525,24.911
+                                c4.811,16.609,7.216,36.776,7.216,60.497c0,23.726-2.405,43.972-7.216,60.737c-4.811,16.76-10.653,25.146-17.525,25.146
+                                c-6.873,0-12.716-8.385-17.526-25.146C1846.798,791.52,1844.393,771.274,1844.393,747.548z"/>
+                        </g>
+                    </svg>
+                </p>
+                <p class="text-small">A proficient <span class="type-animate"></span></p>
+                <div class="connect">
+                    <a href="https://github.com/Oliver-CodeRepo/"><i class="fab fa-git"></i></a>
+                    <a href="https://www.facebook.com/oliver.mulaku"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/himself_oliver?s=09"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/oliver-mulaku-715390161"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?i=1ra6n70tk3g3f&utm_content=2oidxdd"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#contacts" class="btn">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h1 class="title">About Me</h1>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="{% static 'images/me.jpg' %}" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">I am Oliver Mulaku and I'm a <span class="type-animate-2"></span></div>
+                    <p>
+                        I am Laikipia University graduate where I pursued a Bachelor's degree in Information Communication Technology. I specialized in web development (full stack web-development) and graphic designing. I am in love with creativity. I tend to focus on the best user friendliness type of graphical User Interfaces (GUI). I believe in the ancronym KISS (Keep It Simple and Stupid) as far as UX (User Experience) is concerned.
+                    </p>
+                    <a href="{% static 'docs/resume.pdf' %}" class="btn" download><i class='fa fa-download'></i> Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="service" id="service">
+        <div class="max-width">
+            <h1 class="title">My Services</h1>
+            <div class="service-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fa fa-code"></i>
+                        <div class="text">Web Development</div>
+                        <p>With one year experience, I have developed three complete website. <br> Visit my <a href="https://github.com/Oliver-CodeRepo/" >Github Repo</a> to see some of my work.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa fa-paint-brush"></i>
+                        <div class="text">Graphic Design</div>
+                        <p>I design simple, corprate and descriptive logos, posters and web graphics. <br> click <a href="https://drive.google.com/folderview?id=1ALby2uEB1Hez8nN0ZPO52v8_clLOhNkS">here See My Designs.</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa fa-laptop"></i>
+                        <div class="text">Computer Tutor</div>
+                        <p>My experience at Balozi Training Instute as a computer tutor has prepared me well in tutoring in matters computer applications and programming.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fa fa-tools"></i>
+                        <div class="text">Computer Repair</div>
+                        <p>I have basic skills in computer repairs, maintenance and troubleshooting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id='skills'>
+        <div class="max-width">
+            <h1 class="title">My Skills</h1>
+            <div class="skills-content" id="home-content">
+                <div class="column left">
+                    <div class="text">My Skills and Experience</div>
+                    <p>
+                        With passion, curiosity, and enthusiam in web development and design I have developed a strong desire and agility in this field. I am skilled in full-stack web development and graphic designing.
+                        <br>
+                        <button class="btn" onclick='showSkills()'>Read More</button>
+
+                        <div class="modal" id="modal" style="display:none">
+                            <div class='skillspane'>
+                                <img src="{% static 'images/myLogoNamed.png' %}" alt="" height='40px' width='100px'>
+                                <button class="close" onclick="closeSkills()">x</button>
+                                <br>
+                                <ul style="padding-top:40px;color:black">
+                                    <li><b style="color:dodgerblue">Web Development:</b>
+                                        <ul>
+                                            <li>
+                                                <i>Web front-end</i> - Passion driven coding practice on web design using HTML, core css, bootstrap framework, materialize, jquery and vanilla javascript. Currently advancing into javascript react.
+                                            </li>
+                                            <li>
+                                                <i>Web back-end</i> - I am proficient in python django framework languange in matters web back-end development. I also work with structural PHP, MySQL and currently learning javascript react native.
+                                            </li>
+                                        </ul>
+                                    </li><br>
+                                    <li>
+                                        <b style="color:dodgerblue">Graphic Designing:</b> <br>
+                                        With self taught knowledge and skills I have developed Logos and graphic design for different clients. <a href="https://drive.google.com/folderview?id=1ALby2uEB1Hez8nN0ZPO52v8_clLOhNkS">Click here</a> to see some of my designs.
+                                    </li><br>
+                                    <li>
+                                        <b style="color:dodgerblue">Computer Repairs and maintenance:</b> <br>
+                                        I have experience in Computer maintenance and repaires while schooling from 2016 (troubleshooting, installations and repaires of laptops and desktops).
+                                    </li><br>
+                                    <li>
+                                        <b style="color:dodgerblue">Tutoring:</b> <br>
+                                        I have tutored computer packages at Balozi Institute of Technology in Nairobi.
+                                    </li><br>
+                                </ul> 
+                            </div>
+                        </div>
+                        
+                    </p>
+
+                </div>
+                <div class="column right">
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>JAVASCRIPT</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>DJANGO</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line django"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>PYTHON</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line py"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>83%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>GRAPHIC DESIGN</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line gfx"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h1 class="title">My Projects</h1>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'images/myLogo.png' %}" alt="">
+                        <div class="text">My Portfolio</div>
+                        <p>This site is one of my complete project developed and designed in django, HTML, core CSS, Vanilla Javascript and Jquery.<br> Credits to Oliver Mulaku</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'images/plantG.jpg' %}" alt="">
+                        <div class="text">iAgro solution Portfolio</div>
+                        <p>This Web based site was developed and designed in HTML, core CSS, PHP, MySQL, Vanilla Javascript and Jquery. This was my final yer project.<br> Credits to Oliver Mulaku</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'images/rate-us.png' %}" alt="">
+                        <div class="text">Product Rating App</div>
+                        <p>This is a web-based application focused on rating products designed in HTML, Bootstrap CSS framework and Django framework<br> Credits to Oliver Mulaku</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'images/bike.jpg' %}" alt="">
+                        <div class="text">DTVP Site</div>
+                        <p>DTVP is a web-based site developed and designed in HTML, core CSS, PHP and MySQL. <br> Credits to Oliver Mulaku and Mathias Kyalo </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contacts" id='contacts'>
+        <div class="max-width">
+            <h1 class="title">Contact Me</h1>
+            <div class="contacts-content" id="contacts-content">
+                <div class="column left">
+                    <div class="text">Get in Touch With Me</div>
+                    <p>You can send your message via the form on your right on this site or contact me through the Platforms on your left. </p>
+                    <div class="connect">
+                        <a href="https://github.com/Oliver-CodeRepo/"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/oliver.mulaku"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/himself_oliver?s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/oliver-mulaku-715390161"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/invites/contact/?i=1ra6n70tk3g3f&utm_content=2oidxdd"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fa fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Oliver Mulaku</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">olivermulaku@gmail.com</div>
+                            </div>
+                        </div><div class="row">
+                            <i class="fa fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Phone</div>
+                                <div class="sub-title">+254 799-773-244</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Nairobi, Kenya</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <h1 class="text">Message Me</h1>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <!-- <p style="font-size: 17px; padding: 10px; z-index: 9999; background-color: #f00; color: #fff;">{{ form.errors }}</p> -->
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" id="" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" name="email" id="" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field ">
+                            <input type="text" name="subject" id="" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea name="description" id="" cols="30" rows="4" placeholder="Describe Project.." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="footer" style="background-color: #112f57; color: white; padding: 40px; text-align: center; font-family:calibri">
+        <div class="max-width">
+            <div>
+                <p style="font-size: 17px">Portfolio designed and developed by Oliver Mulaku. <br> All rights reserved Copyright &copy;2021. 
+                    <!-- <script>
+                        let getDate = Date.now();
+                        let getYear = getDate/(365*);
+                        console.log(getYear); 
+                    </script> -->
+                 </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
