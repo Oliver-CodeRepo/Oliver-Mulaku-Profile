@@ -631,11 +631,11 @@ section{
     width: calc(50% - 30px);
 }
 .contacts .contacts-content .left .connect, .home .home-content .connect{
-    margin-left:5px;
-    margin: 15px
+    margin-top: 15px;
 }
 .contacts .contacts-content .left .connect a, .home .home-content .connect a{
-    margin: 10px 10px;
+    margin: 10px 0px;
+    margin-right: 5px;
 }
 .contacts .contacts-content .left .connect a i, .home .home-content .connect a i{
     font-size: 25px;
