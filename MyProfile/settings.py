@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 from django.core.exceptions import ImproperlyConfigured
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,25 +42,28 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # ENV_ROLE = get_env_variable('ENV_ROLE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = True
 # TEMPLATE_DEBUG = DEBUG
 # if ENV_ROLE == 'development':
 #     DEBUG = True
 #     TEMPLATE_DEBUG = DEBUG
 
 
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
 ALLOWED_HOSTS = []
 
-SECRET_KEY = 'o15wk%tkb^zn75wk!@xe25n8#splgax!)92)lop%v^y(y)p5yr'
 
-TWILIO_ACCOUNT_SID = 'ACb33ebaa62239e6e89b5eaf503e8b0177'
-TWILIO_AUTH_TOKEN = '1a75a89f57be759cbc433c22ab221463'
-TWILIO_NUMBER = '+18322636707'
-# TWILIO_ACCOUNT_SID = get_env_variable("TWILIO_ACCOUNT_SID")
-# TWILIO_AUTH_TOKEN = get_env_variable("TWILIO_AUTH_TOKEN")
-# TWILIO_NUMBER = get_env_variable("TWILIO_NUMBER")
+# TWILIO_ACCOUNT_SID = 'ACb33ebaa62239e6e89b5eaf503e8b0177'
+# TWILIO_AUTH_TOKEN = '1a75a89f57be759cbc433c22ab221463'
+# TWILIO_NUMBER = '+18322636707'
+
+TWILIO_ACCOUNT_SID = str(os.getenv("TWILIO_ACCOUNT_SID"))
+TWILIO_AUTH_TOKEN = str(os.getenv("TWILIO_AUTH_TOKEN"))
+TWILIO_NUMBER = str(os.getenv("TWILIO_NUMBER"))
+
+
 # SMS_BROADCAST_TO_NUMBER = ["+254799773244"]
 
 
@@ -169,7 +175,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
     # Allow all host headers
-    ALLOWED_HOSTS = ['oliver-mulaku.herokuapp.com']
+    ALLOWED_HOSTS = ['oliver-mulaku.herokuapp.com','localhost:8000']
     DEBUG = True
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

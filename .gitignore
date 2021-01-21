@@ -77,7 +77,7 @@ pytestdebug.log
 # Translations
 *.mo
 
-
+myenv/
 
 # Django stuff:
 
