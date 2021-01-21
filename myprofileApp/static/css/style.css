@@ -628,11 +628,11 @@ section{
     margin: 15px
 }
 .contacts .contacts-content .left .connect a, .home .home-content .connect a{
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 .contacts .contacts-content .left .connect a i, .home .home-content .connect a i{
     font-size: 25px;
-    color: #d3122c;
+    color: #112f57;
 }
 .contacts .contacts-content .left .text{
     color: #112f57;

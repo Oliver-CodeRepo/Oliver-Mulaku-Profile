@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from twilio.rest import Client
 import mimetypes
+import time
 from django.http import HttpResponse
 
 from .forms import ContactForm
@@ -11,6 +12,7 @@ from .models import Contact
 # Create your views here.
 
 def homePage(request):
+    getYear = time.strftime("%Y")
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -45,7 +47,7 @@ def homePage(request):
         else:
             form = ContactForm()
 
-    context = {'form':form}
+    context = {'form':form, 'getYear':getYear}
     return render(request, 'myprofileTemp/index.html', context)
 
 
