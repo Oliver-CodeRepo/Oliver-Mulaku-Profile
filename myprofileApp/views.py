@@ -39,7 +39,7 @@ def homePage(request):
             message = client.messages.create(
                             body='Yooh Oliver, You\'ve a message on your site.\nIt was sent by '+ user_email +' .\nSubject: '+ user_subject + '.\nDescription:\n '+ user_Descr +' ',
                             from_= settings.TWILIO_NUMBER,
-                            to='+254799773244'
+                            to = settings.BROADCAST_NUMBER,
                         )
             
 
