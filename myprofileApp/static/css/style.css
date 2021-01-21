@@ -168,7 +168,7 @@ section{
     opacity: .8;
 }
 .home span.type-animate{
-    color: cyan;
+    color: crimson;
     font-weight: 500;
 }
 
@@ -575,6 +575,13 @@ section{
     margin: 10px 0;
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.projects .carousel .text p{
+    text-align: justify;
+}
+.projects .carousel .text p a:hover{
+    color:white;
+    border: 1px solid white;
 }
 .owl-dots{
     text-align:center;
