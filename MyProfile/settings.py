@@ -33,27 +33,32 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_env_variable('SECRET_KEY')
+# SECRET_KEY = get_env_variable('SECRET_KEY')
 
 # Get ENV VARIABLES Key
-ENV_ROLE = get_env_variable('ENV_ROLE')
+# ENV_ROLE = get_env_variable('ENV_ROLE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
-if ENV_ROLE == 'development':
-    DEBUG = True
-    TEMPLATE_DEBUG = DEBUG
+# DEBUG = False
+# TEMPLATE_DEBUG = DEBUG
+# if ENV_ROLE == 'development':
+#     DEBUG = True
+#     TEMPLATE_DEBUG = DEBUG
 
 
 
 
 ALLOWED_HOSTS = []
 
-TWILIO_ACCOUNT_SID = get_env_variable("TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN = get_env_variable("TWILIO_AUTH_TOKEN")
-TWILIO_NUMBER = get_env_variable("TWILIO_NUMBER")
-SMS_BROADCAST_TO_NUMBER = ["+254799773244"]
+SECRET_KEY = 'o15wk%tkb^zn75wk!@xe25n8#splgax!)92)lop%v^y(y)p5yr'
+
+TWILIO_ACCOUNT_SID = 'ACb33ebaa62239e6e89b5eaf503e8b0177'
+TWILIO_AUTH_TOKEN = '1a75a89f57be759cbc433c22ab221463'
+TWILIO_NUMBER = '+18322636707'
+# TWILIO_ACCOUNT_SID = get_env_variable("TWILIO_ACCOUNT_SID")
+# TWILIO_AUTH_TOKEN = get_env_variable("TWILIO_AUTH_TOKEN")
+# TWILIO_NUMBER = get_env_variable("TWILIO_NUMBER")
+# SMS_BROADCAST_TO_NUMBER = ["+254799773244"]
 
 
 # Application definition
@@ -152,6 +157,7 @@ STATIC_URL = '/static/'
 
 STATIC_FILES = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 RESUME_URL = '/static/docs/resume.pdf'
 
