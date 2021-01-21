@@ -168,8 +168,8 @@ section{
     opacity: .8;
 }
 .home span.type-animate{
-    color: crimson;
-    font-weight: 500;
+    color: cyan;
+    font-weight: 600;
 }
 
 /* animating Oliver Mulaku. */
@@ -579,7 +579,7 @@ section{
 .projects .carousel .text p{
     text-align: justify;
 }
-.projects .carousel .text p a:hover{
+.projects .carousel .btn:hover{
     color:white;
     border: 1px solid white;
 }
