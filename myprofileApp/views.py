@@ -41,7 +41,8 @@ def homePage(request):
                             from_= settings.TWILIO_NUMBER,
                             to = settings.BROADCAST_NUMBER,
                         )
-            
+                        
+            print(message.sid)
 
             return redirect('home')
         else:

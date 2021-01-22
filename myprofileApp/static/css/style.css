@@ -713,7 +713,7 @@ section{
 }
 .contacts .right form .button{
     height: 45px;
-    width:150px;
+    width: 250px;
 }
 .contacts .right form .button .btn{
     width: 100%;
@@ -723,7 +723,9 @@ section{
     margin-top: 5px;
     transition: all .3s ease;
 }
-
+.contacts .right form .button .btn:hover{
+    opacity: .8;
+}
 
 
 
