@@ -39,25 +39,20 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECRET_KEY = get_env_variable('SECRET_KEY')
 
 # Get ENV VARIABLES Key
-# ENV_ROLE = get_env_variable('ENV_ROLE')
+ENV_ROLE = 'development'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# TEMPLATE_DEBUG = DEBUG
-# if ENV_ROLE == 'development':
-#     DEBUG = True
-#     TEMPLATE_DEBUG = DEBUG
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
+if ENV_ROLE == 'development':
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
 
 
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
 ALLOWED_HOSTS = []
-
-
-# TWILIO_ACCOUNT_SID = 'ACb33ebaa62239e6e89b5eaf503e8b0177'
-# TWILIO_AUTH_TOKEN = '1a75a89f57be759cbc433c22ab221463'
-# TWILIO_NUMBER = '+18322636707'
 
 TWILIO_ACCOUNT_SID = str(os.getenv("TWILIO_ACCOUNT_SID"))
 TWILIO_AUTH_TOKEN = str(os.getenv("TWILIO_AUTH_TOKEN"))
@@ -177,6 +172,6 @@ if os.getcwd() == '/app':
 
     # Allow all host headers
     ALLOWED_HOSTS = ['oliver-mulaku.herokuapp.com','localhost:8000']
-    DEBUG = True
+    DEBUG = False
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
