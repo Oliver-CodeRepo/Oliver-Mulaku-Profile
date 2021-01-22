@@ -9,9 +9,9 @@ This is a single-paged portfolio that I developed to describe, illustrate and de
 1. git clone this repo into you machine.
 2. make sure you installed python 3.7.x in path.
 3. In the command prompt navigate to the project folder
-4. cd to the directory where requirements.txt is located
-5. activate your virtualenv by running >mySiteEnv\Scripts\activate
-6. install all the dependencies required by the site by running >pip install -r requirements.txt
+4. cd to the directory MyProfile where requirements.txt is located
+5. activate the virtualenv by running >mySiteEnv\Scripts\activate
+6. install all the dependencies required by the site by running >pip3 install -r requirements.txt
 7. activate your local server by running >python manage.py runserver
 8. open your browser type localhost:8000/ on url bar to open the app.
 
