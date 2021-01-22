@@ -634,8 +634,7 @@ section{
     margin-top: 15px;
 }
 .contacts .contacts-content .left .connect a, .home .home-content .connect a{
-    margin: 10px 0px;
-    margin-right: 5px;
+    margin: 10px 5px 10px 0px;
 }
 .contacts .contacts-content .left .connect a i, .home .home-content .connect a i{
     font-size: 25px;
