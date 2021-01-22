@@ -713,7 +713,7 @@ section{
 }
 .contacts .right form .button{
     height: 45px;
-    width: 250px;
+    width: 50%;
 }
 .contacts .right form .button .btn{
     width: 100%;
