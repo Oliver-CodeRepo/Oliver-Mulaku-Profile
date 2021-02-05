@@ -134,7 +134,7 @@ section{
 /* home section style */
 .home{
     display: flex;
-    background: url('../images/wallpaper2.png') no-repeat center;
+    background: url('../images/web-banner.png') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -169,7 +169,7 @@ section{
 }
 .home span.type-animate{
     color: cyan;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* animating Oliver Mulaku. */
@@ -576,6 +576,13 @@ section{
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.projects .carousel .text p{
+    text-align: justify;
+}
+.projects .carousel .btn:hover{
+    color:white;
+    border: 1px solid white;
+}
 .owl-dots{
     text-align:center;
     margin-top: 20px;
@@ -624,11 +631,10 @@ section{
     width: calc(50% - 30px);
 }
 .contacts .contacts-content .left .connect, .home .home-content .connect{
-    margin-left:5px;
-    margin: 15px
+    margin-top: 15px;
 }
 .contacts .contacts-content .left .connect a, .home .home-content .connect a{
-    margin: 10px 10px;
+    margin: 10px 5px 10px 0px;
 }
 .contacts .contacts-content .left .connect a i, .home .home-content .connect a i{
     font-size: 25px;
@@ -707,7 +713,7 @@ section{
 }
 .contacts .right form .button{
     height: 45px;
-    width:150px;
+    width: 50%;
 }
 .contacts .right form .button .btn{
     width: 100%;
@@ -717,7 +723,9 @@ section{
     margin-top: 5px;
     transition: all .3s ease;
 }
-
+.contacts .right form .button .btn:hover{
+    opacity: .8;
+}
 
 
 

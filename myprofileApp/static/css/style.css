@@ -134,7 +134,7 @@ section{
 /* home section style */
 .home{
     display: flex;
-    background: url('../images/wallpaper2.png') no-repeat center;
+    background: url('../images/web-banner.png') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;

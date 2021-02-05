@@ -26,14 +26,14 @@ $(document).ready(function(){
 
     // typing animation
     var typed = new Typed(".type-animate", {
-        strings : ['fullstack web developer.','graphic designer.','python programmer.','freelancer'],
+        strings : ['fullstack web developer.','graphic designer.','python programmer.','Data analyst','freelancer'],
         typeSpeed : 100,
         backSpeed : 60,
         loop: true
     });
 
     var typed = new Typed(".type-animate-2", {
-        strings : ['fullstack web developer.','graphic designer.','python programmer.','freelancer'],
+        strings : ['fullstack web developer.','graphic designer.','python programmer.','Data analyst','freelancer'],
         typeSpeed : 100,
         backSpeed : 60,
         loop: true
